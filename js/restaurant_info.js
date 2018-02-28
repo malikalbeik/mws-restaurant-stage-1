@@ -128,12 +128,13 @@ createReviewHTML = (review) => {
   date.classList.add("review-date");
   div.appendChild(date);
 
+  li.appendChild(div);
+
   const rating = document.createElement('p');
   rating.innerHTML = `Rating: ${review.rating}`;
-  rating.classList.add("revie-rating");
-  div.appendChild(rating);
+  rating.classList.add("review-rating");
+  li.appendChild(rating);
 
-  li.appendChild(div);
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
   li.appendChild(comments);
