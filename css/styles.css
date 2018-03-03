@@ -42,15 +42,29 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 /* ====================== Navigation ====================== */
+.skip-map {
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background-color: rgb(255, 165, 0);
+	color: white;
+	padding: 8px;
+	z-index: 100;
+}
+.skip-map:focus {
+	top:0;
+}
+
 header h1 {
-  height: 80px;
   background-color: #252831;
   text-align:center;
 	margin: auto;
 	padding-top: 25px;
-  font-size: 26pt;
+  padding-bottom: 25px;
+  font-size: 24px;
   font-weight: 200;
-  letter-spacing: 10px;
+  letter-spacing: 5px;
+	vertical-align: middle;
   text-transform: uppercase;
 }
 
@@ -58,37 +72,41 @@ header h1 a {
   color: #fff;
 }
 #breadcrumb {
-    padding: 10px 40px 16px;
-    list-style: none;
-    background-color: #eee;
-    font-size: 17px;
-    margin: 0;
-    width: calc(50% - 80px);
+  padding: 10px 40px 16px;
+  list-style: none;
+  background-color: #eee;
+  font-size: 17px;
+  margin: 0;
+  width: calc(50% - 80px);
 }
 
 /* Display list items side by side */
 #breadcrumb li {
-    display: inline;
+  display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
 #breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
+  color: #0275d8;
+  text-decoration: none;
 }
 
 /* Add a color on mouse-over */
 #breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+	color: #01447e;
+	text-decoration: underline;
 }
+#neighborhoods-select:focus, #cuisines-select:focus {
+	border: solid 3px red;
+}
+
 /* ====================== Map ====================== */
 #map {
   height: 400px;
@@ -133,9 +151,6 @@ header h1 a {
 	display: flex;
 	flex-flow: wrap;
 	justify-content: center;
-
-
-
 }
 #restaurants-list li {
   background-color: #fff;
@@ -194,10 +209,10 @@ header h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: calc(100% - 105px);
+  height: calc(100% - 85px);
   position: fixed;
   right: 0;
-  top: 105px;
+  top: 85px;
   width: 50%;
 }
 .inside #map {
@@ -207,8 +222,7 @@ header h1 a {
 }
 .inside #footer {
   bottom: 0;
-  position: absolute;
-  width: 45%;
+  width: 45.3%;
 }
 #restaurant-name {
   color: #f18200;
