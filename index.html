@@ -9,6 +9,7 @@
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="manifest" href="manifest.json">
   <title>Restaurant Reviews</title>
 </head>
 
@@ -42,12 +43,23 @@
   <script charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvR6EVFp2ub76inNYbvMOO-YxrU6Spdak&libraries=places&callback=initMap"></script>
 
-
   <footer id="footer">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
-<script src="/index.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function(registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch(function(err) {
+          console.log('ServiceWorker registration failed:', err);
+        })
+    });
+  }
+  </script>
 </body>
 
 </html>
