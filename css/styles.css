@@ -79,27 +79,31 @@ header h1 a {
   margin: 0;
   width: calc(50% - 80px);
 }
+#breadcrumb ul {
+	margin: 0;
+	padding: 0;
+}
 
 /* Display list items side by side */
-#breadcrumb li {
+#breadcrumb ul li {
   display: inline;
 }
 
 /* Add a slash symbol (/) before/behind each list item */
-#breadcrumb li+li:before {
+#breadcrumb ul li+li:before {
   padding: 8px;
   color: black;
   content: "/\00a0";
 }
 
 /* Add a color to all links inside the list */
-#breadcrumb li a {
+#breadcrumb ul li a {
   color: #0275d8;
   text-decoration: none;
 }
 
 /* Add a color on mouse-over */
-#breadcrumb li a:hover {
+#breadcrumb ul li a:hover {
 	color: #01447e;
 	text-decoration: underline;
 }
@@ -172,7 +176,7 @@ header h1 a {
   min-height: 248px;
   min-width: 100%;
 }
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 14pt;
